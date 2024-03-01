@@ -1,3 +1,4 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/E1vcEWuv)
 # Divide and Conquer Sum
 
 In the lectures, we've covered merge sort, which uses a divide-and-conquer
@@ -25,3 +26,23 @@ and solve it as we did in the lectures. Give the final $\Theta$ complexity.
 
 Describe your reasoning and the conclusion you've come to. Your reasoning is the
 most important part. Add your answer to this markdown file.
+
+For $n \ge 3:$   --->   $3T(n/3)$
+
+For $n < 2:$     --->   1
+
+T(n) = 3T(n/3)
+
+   = 3(3T(n/9) = 9T(n/9)
+     
+   = 9(3T(n/27) = 27T(n/27)
+     
+ ... = $3^iT(n/3^i)$; so take i = log n
+ 
+   = nT(1) => $n \in \Theta(n)$
+
+The algorithm I've made splits the array into 3 different lists for input sizes greater 
+than 2 and then adds them to a total variable. Everything except for the recursion is 
+constant as it does all of those operations in constant time and no matter the input size. 
+The complexity I have found makes sense as the algorithm runs a bunch of operations in 
+constant time and then 3 operations that solely depend on the amount of elements.
