@@ -33,13 +33,13 @@ For $n < 2:$     --->   1
 
 T(n) = 3T(n/3)
 
-     = 3(3T(n/9) = 9T(n/9)
+   = 3(3T(n/9) = 9T(n/9)
      
-     = 9(3T(n/27) = 27T(n/27)
+   = 9(3T(n/27) = 27T(n/27)
      
- ... = $3^iT(n/3^i)$    i = log n
+ ... = $3^iT(n/3^i)$; so take i = log n
  
-     = nT(1) => $n \in \Theta(n)$
+   = nT(1) => $n \in \Theta(n)$
 
 The algorithm I've made splits the array into 3 different lists for input sizes greater 
 than 2 and then adds them to a total variable. Everything except for the recursion is 
