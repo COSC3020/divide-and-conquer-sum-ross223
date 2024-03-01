@@ -14,8 +14,8 @@ function divide(a, lo, hi){
     var size = hi - lo + 1;               // Used chat gpt for help with the interval calculation
     var interval = Math.floor(size / 3);  // Used this website: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor to review Math.floor
     var m1 = lo + interval;
-    var m2 = lo + interval * 2;
-    total += divide(a, lo, m1);
+    var m2 = lo + interval * 2;           
+    total += divide(a, lo, m1);           // Used lecture slides for some clarification on how divide and conquer algorithms work here
     if (m1 != m2){
         total += divide(a, m1 + 1, m2);
     }
