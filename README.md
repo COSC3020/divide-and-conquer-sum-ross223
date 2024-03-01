@@ -28,12 +28,17 @@ Describe your reasoning and the conclusion you've come to. Your reasoning is the
 most important part. Add your answer to this markdown file.
 
 For $n \ge 3:$   --->   $3T(n/3)$
+
 For $n < 2:$     --->   1
 
 T(n) = 3T(n/3)
+
      = 3(3T(n/9) = 9T(n/9)
+     
      = 9(3T(n/27) = 27T(n/27)
+     
  ... = $3^iT(n/3^i)$    i = log n
+ 
      = nT(1) => $n \in \Theta(n)$
 
 The algorithm I've made splits the array into 3 different lists for input sizes greater 
